@@ -1,22 +1,17 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
- */
 package projectuas;
 
-/**
- *
- * @author USER
- */
+import com.mysql.cj.jdbc.MysqlDataSource; // Corrected import statement
+import java.sql.Connection; // Corrected import statement
+import java.sql.SQLException;
+
 public class ProjectUAS {
-    public class koneksi {
     public static Connection sambungkeDB() {
         try {
             MysqlDataSource mds = new MysqlDataSource();
             mds.setUser("root");
-            mds.setPassword(""); 
-            mds.setDatabaseName("workshop");
-            mds.setPort(3306); 
+            mds.setPassword("");
+            mds.setDatabaseName("tiketbis");
+            mds.setPort(3306);
             mds.setServerName("localhost");
             mds.setServerTimezone("Asia/Jakarta");
             Connection con = mds.getConnection();
@@ -36,5 +31,3 @@ public class ProjectUAS {
         }
     }
 }
-
-    
